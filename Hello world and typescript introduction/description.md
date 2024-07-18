@@ -1,10 +1,8 @@
  # TYPESCRIPT 
 
-   It was developed by microsoft .Typescript is the super set of javascript . It is a programing language which comes with strict
-type checking . Typescript checks the error while writing the code unlike javascript which checks the errors on the run time.
-Still typescript is compiled in to javascript for it to run .
+   Typescript was developed by microsoft.Typescript is the super set of javascript . It is a programing language which comes with strict type checking . Typescript checks the error while writing the code unlike javascript which checks the errors on the run time. Still typescript is compiled in to javascript for it to run .
 
-for installing typescript you have to run the following command:
+For installing typescript you have to run the following command:
 (npm install -g typescript)   // -g stands for global 
 
 make sure that you have intalled Vscode 
