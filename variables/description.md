@@ -14,9 +14,12 @@ by hovering the cursor on the message we can see somethoing like (let message:st
 
 # Strong typing/Type annotations
 Whenever we define the type of the variable ourselves it is known as strong typing and the defined typed is named as type annotations
+
 lets understand it 
+
 let message : string = "Aliza";
-Here the whole line of code will be considered as strongly typed because in this line we have specified the line of code with a type string it means that the variable message will not accept any other value eccept string. If we enter any other value the execpt string typescript will give an error
-the (:string) which we put infront of the variable message is know as an type annotation its just a name.
+Here the whole line of code will be considered as strongly typed because in this line we have specified the line of code with a type string it means that the variable message will not accept any other value eccept string. If we enter any other value the execpt string typescript will give an error.
+
+The (:string) which we put infront of the variable message is know as an type annotation its just a name.
 
 
