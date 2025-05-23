@@ -46,6 +46,7 @@ Some of the main differences are as follows
 # ACCESSING JSON DATA 
 There are two methods to access data in JSON fromat
 FRIST METHOD
+To access by the dot method
 ```
 let jsonObjCar = {
     "name":"lamborgini",
@@ -55,10 +56,157 @@ console.log(jsonObjCar.name);
 console.log(jsonObjCar.color);
 ```
 SECOND METHOD
-```let jsonObjCars = {
+To access by the square bracket method
+```
+let jsonObjCars = {
     "name":"Corolla",
     "color":"black", 
 };
 console.log(jsonObjCars["name"]);
 console.log(jsonObjCars["color"]);
+```
+
+# JSON ARRAY
+This is an example of JSON array.
+```
+let jsonArray= ["coding","painting","drawing"];
+console.log(jsonArray);
+```
+Another example
+```
+let jsObj = {
+  "name": "batool",
+  "age":"21",
+  "hobbies":["coding","painting"]
+}
+console.log(jsObj);
+console.log(jsObj["hobbies"][0]);// accessing array
+```
+# USAGE OF JSON ARRAYS
+/*JSON arrays are widely used in APIs and data interchange scenarios. Some common use cases include:
+
+1)Lists of items: Like products, users, or any other collection.
+
+2)Response data from servers: When querying a database or an API,
+the response is often in the form of a JSON array.
+
+3)Configuration settings: JSON arrays can be used to store configuration settings that involve
+lists of values 
+
+
+# JSON string 
+this is how you can write json string
+```
+const data = '{"name": "nida", "age": 30}';
+console.log(data);
+converting JSON string into json object
+const objs = JSON.parse(data); 
+console.log(objs.age);
+```
+
+# converting json object into json string
+```
+let student ={
+  "quarter": 1,
+  "learning":"typeScript",
+  "exams":"upcomming",
+  "preparationSource":"SirZiaRepo"
+}
+let turnIntoStr = JSON.stringify(student);
+console.log(turnIntoStr);
+```
+
+
+ # PRACTICE QUESTIONS 
+
+## //-------------------QUESTION 1-----------------//
+Convert the following json string into json object and log out the tittle 
+```
+ {
+   "book": {
+   "title": "JavaScript: The Good Parts",
+   "author": "Douglas Crockford",
+   "published": 2008
+   }
+ }
+```
+### Solution 
+```
+const jsonString = '{"book": {"title": "JavaScript: The Good Parts", "author": "Douglas Crockford", "published": 2008}}';
+const convert = JSON.parse(jsonString);
+console.log(convert.book.title);
+```
+
+## //-----------------QUESTION 2-------------//
+ Convert the following JavaScript object into a JSON string.
+ ```
+ const user = {
+  name: "Ali",
+  age: 25,
+  skills: ["HTML", "CSS", "JavaScript"]
+ };
+```
+### solution 
+```
+let transform =  {name: "Ali", age: 25, skills: ["HTML", "CSS", "JavaScript"]};
+console.log(JSON.stringify(transform));
+```
+
+# //------------------- QUESTION 3 ------------------//
+// using the following JSON object, write a function to return the name of the second employee.
+```
+ {
+   "employees": [
+     { "name": "ali", "age": 30 },
+     { "name": "Daniyal", "age": 25 },
+     { "name": "hamza", "age": 35 }
+   ]
+ }
+```
+### solution
+```
+function employee (){
+  const emp = {
+  "employees": [
+  { "name": "ali", "age": 30 },
+  { "name": "Daniyal", "age": 25 },
+  { "name": "hamza", "age": 35 }
+  ]
+   }
+  return emp
+}
+let result = employee()
+let output = result.employees[1].name
+console.log(output);
+```
+# //----------------- QUESTION 4--------------------//
+
+ Write a function that takes a JSON string representing an array of numbers and returns the sum of those numbers.
+### solution
+```
+let adc = '[1,2,3,4,5,6]';
+let arr:number[] = JSON.parse(adc);
+function calculate (arrr:number[]){
+return arrr.reduce((sum:number,num:number)=>sum + num)
+ 
+}
+console.log(calculate(arr));
+```
+# //----------------- QUESTION 5----------------//
+// Given the following JSON array of objects, write a function to filter out users who are not active.
+```
+ [
+   { "name": "Ali", "active": true },
+   { "name": "Batool", "active": false },
+   { "name": "kinza", "active": true }
+ ]
+```
+### solution
+```
+const Data ='[{"name": "Ali", "active": true},{"name": "Batool", "active": false},{"name": "Kinza", "active": true}]'
+const filterData = JSON.parse(Data);
+function filtringData(user:any){
+  return user.filter((user: { active: boolean; }) => user.active);
+}
+console.log(filtringData(filterData))
 ```
